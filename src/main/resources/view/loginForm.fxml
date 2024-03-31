@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="335.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="593.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fisherman-2739115_640.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUserName" layoutX="100.0" layoutY="134.0" onAction="#txtUsernameOnAction" prefHeight="24.0" prefWidth="209.0" promptText="username" style="-fx-background-color: #fff3db;" AnchorPane.bottomAnchor="233.0" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label layoutX="179.0" layoutY="14.0" prefHeight="68.0" prefWidth="259.0" text="LNV SEA FOOD" textFill="#698a49">
+         <font>
+            <Font name="Dyuthi Regular" size="39.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" layoutX="100.0" layoutY="176.0" onAction="#txtPasswordOnAction" prefHeight="24.0" prefWidth="209.0" promptText="password" style="-fx-background-color: #fff3db;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="192.0" layoutY="281.0" onAction="#btnLoginOnAction" ripplerFill="#59daeb" style="-fx-background-color: #ffe29a;" text="Login">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </JFXButton>
+      <Hyperlink layoutX="129.0" layoutY="317.0" onAction="#lnkLinkOnAction" text="froget password ? Create new account">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
