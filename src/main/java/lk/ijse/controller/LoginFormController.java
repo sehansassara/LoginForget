@@ -25,7 +25,7 @@ public class LoginFormController implements Initializable {
     @FXML
     private TextField txtPassword;
 
-    public void btnLoginOnAction(ActionEvent actionEvent) throws SQLException {
+    public void btnLoginOnAction(ActionEvent actionEvent) throws SQLException, IOException {
         String username = txtUserName.getText();
         String password = txtPassword.getText();
 
@@ -50,8 +50,11 @@ public class LoginFormController implements Initializable {
             e.printStackTrace();
             showAlert("Error", "An error occurred while attempting to login.");
         }
-        System.out.println("Username: " + username);
-        System.out.println("Password: " + password);
+        Parent root = FXMLLoader.load(getClass().getResource("/view/dashBoardForm.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
 
